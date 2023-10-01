@@ -5,19 +5,26 @@ namespace TechJobsOOAutoGraded6
 	{
         private int id;
         private static int nextId = 1;
-        private string value;
 
-        // TODO: Task 2: Change the fields to auto-implemented properties.
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
+        public string Value { get; set; }
+
+        
         public CoreCompetency()
         {
             id = nextId;
             nextId++;
+
         }
 
         public CoreCompetency(string v) : this()
         {
-            value = v;
+            Value = v;
         }
 
         public override bool Equals(object obj)
@@ -33,7 +40,7 @@ namespace TechJobsOOAutoGraded6
 
         public override string ToString()
         {
-            return value;
+            return Value;
         }
     }
 }
